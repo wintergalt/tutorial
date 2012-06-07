@@ -1,1 +1,9 @@
-index
+{% if latest_song_list %}
+	<ul>
+	{% for song in latest_song_list %}
+		<li>{{ song.title }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>There are no songs yet</p>
+{% endif %}

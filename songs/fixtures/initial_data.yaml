@@ -1,0 +1,42 @@
+- model: songs.Artist
+  pk: 1
+  fields:
+    name: The Ramones 
+    created: 2012-01-01
+- model: songs.Artist
+  pk: 2
+  fields:
+    name: The Kinks
+    created: 2012-01-01
+
+- model: songs.Song
+  pk: 1
+  fields:
+    title: Blitzkrieg Bop
+    body: They are forminng in straight line...
+    artist: 1
+    created: 2012-01-01
+
+- model: songs.Song
+  pk: 2
+  fields:
+    title: Cretin Hop
+    body: There's no stoppin' the cretin from hoppin'
+    artist: 1
+    created: 2012-01-01
+
+- model: songs.Song
+  pk: 3
+  fields:
+    title: Berkley Mews
+    body: In Berkley Mews I first met you
+    artist: 2
+    created: 2012-01-01
+
+- model: songs.Song
+  pk: 4
+  fields:
+    title: Party Line
+    body: This is a party line
+    artist: 2
+    created: 2012-01-01
