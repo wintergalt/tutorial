@@ -6,9 +6,15 @@ class Artist(models.Model):
     name = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
 
+    def __unicode__(self):
+        return self.name
+
 class Song(models.Model):
     artist = models.ForeignKey(Artist)
     title = models.CharField(max_length=255)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return self.title
 

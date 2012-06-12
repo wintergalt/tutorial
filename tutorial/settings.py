@@ -1,3 +1,4 @@
+import os.path
 # Django settings for tutorial project.
 
 DEBUG = True
@@ -48,12 +49,15 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+#MEDIA_ROOT = os.path.join(os.path.dirname(__file__), "media") 
+MEDIA_ROOT = os.path.dirname(os.path.dirname(__file__))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
+
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -111,6 +115,17 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     '/home/diego/workspace/tutorial/templates',
     '/home/dromoli/workspace-python/tutorial/templates',
+)
+
+# A tuple of callables that are used to populate 
+# the context in RequestContext. These callables 
+# take a request object as their argument and return 
+# a dictionary of items to be merged into the context.
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.static',
+    'django.core.context_processors.media',
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
 )
 
 INSTALLED_APPS = (

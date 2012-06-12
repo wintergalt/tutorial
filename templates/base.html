@@ -1,16 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}style.css?{% now 'U' %}" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css?{% now 'U' %}" />
 		<title>{% block title %}{% endblock %}</title>
 
-		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}menu.css" />
-		<script type="text/javascript" src="{{MEDIA_URL}}menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}menu.css" />
+		<script type="text/javascript" src="{{ STATIC_URL }}menu.js"></script>
 
-		<script type="text/javascript" src="{{MEDIA_URL}}jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.2.js"></script>
 	</head>
 	<body>
-		<a href="/songs/" style="text-decoration:none"><h1>Tab Collection</h1></a>
+		<a href="/songs/" style="text-decoration:none"><h1>Songs</h1></a>
+
 		{% include 'songs/navmenu.html' %}
 		{% block content %}{% endblock %}
 		{% block footer %}
