@@ -34,8 +34,9 @@ h1 { color:#5E5E5E;
   text-align: center;
 }
 
-.message {
-  color:red;
+.messages {
+  color:green;
   font-family: Trebuchet MS;
   font-size: 10px;
+  font-weight: bold;
 }

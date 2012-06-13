@@ -1,13 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Songs App{% endblock %}
 {% block content %}
-	{% if message %}
-		<p class="message">{{ message }}</p>
-	{% endif %}
 	{% if latest_song_list %}
 		<ul>
 		{% for song in latest_song_list %}
-			<li>{{ song.title }}</li>
+			<li><a href="song/{{song.id}}">{{ song.title }}</a></li>
 		{% endfor %}
 		</ul>
 	{% else %}

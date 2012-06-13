@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Song detail{% endblock %}
+{% block content %}
+	{% if song %}
+		<table>
+			<tr>
+				<td>Title:</td>
+				<td>{{song.title}}</td>
+			</tr>
+			<tr>
+				<td>Artist:</td>
+				<td>{{song.artist}}</td>
+			</tr>
+			<tr>
+				<td>Body:</td>
+				<td class="songBody">{{song.body}}</td>
+			</tr>
+		</table>	
+	{% endif %}
+{% endblock %}
+
