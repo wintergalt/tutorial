@@ -23,7 +23,7 @@ h1 { color:#5E5E5E;
 }
 
 .songBody {
-    font-family: monospace;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: 11px;
 }
 

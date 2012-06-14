@@ -1,4 +1,12 @@
 {% extends "base.html" %}
+{% block head %}
+	<script>
+	  $(document).ready(function() {
+	    $("#dialog").dialog({modal: true});
+	  });
+	</script>
+{% endblock %}
+
 {% block title %}New Song{% endblock %}
 {% block content %}
 	<form action="/songs/new-song-submit" method="POST">
